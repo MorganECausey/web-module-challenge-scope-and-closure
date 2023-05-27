@@ -64,10 +64,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(number){
+  if(number >= 0 && number <= 2);
+    return Math.floor(Math.random( number >= 0 && number <= 2 ));
 }
-
+console.log('Task 2:', inning(2));
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -83,10 +84,15 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
-  /*Code Here*/
+function finalScore(inning, number) {
+ const a = "Home"
+ const b = "Away"
+ return {
+  [a]: inning(number),
+  [b]: inning(number)
+ }
 }
-
+console.log('Task 3:', finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
@@ -147,7 +153,7 @@ Use the scoreboard function below to do the following:
   "This game will require extra innings: Away 10 - Home 10"
 ] */
 // NOTE: There is no test associated with this code; if your output matches the given example, consider it complete!
-function scoreboard(/* CODE HERE */) {
+function scoreboard(array) {
   /* CODE HERE */
 }
 
