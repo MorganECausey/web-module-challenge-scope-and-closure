@@ -65,10 +65,11 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(number){
-  if(number >= 0 && number <= 2);
-    return Math.floor(Math.random( number >= 0 && number <= 2 ));
+  const min = Math.ceil(0);
+  const max = Math.floor(2); 
+    return Math.floor(Math.random() * (max - min) + min);
 }
-console.log('Task 2:', inning(2));
+console.log('Task 2:', inning(5));
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -83,10 +84,11 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-
-function finalScore(inning, number) {
- const a = "Home"
- const b = "Away"
+let a = "Home"
+let b = "Away"
+function finalScore(inning, number)
+{
+ 
  return {
   [a]: inning(number),
   [b]: inning(number)
@@ -107,11 +109,15 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inning, number) {
+  if(number >= 0 && number <= 2);
+    return {
+      [a]: inning(number),
+      [b]: inning(number)
+    }
 
 }
-
+console.log('Task 4:', getInningScore(inning, 7));
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
